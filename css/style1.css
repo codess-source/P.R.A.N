@@ -1,0 +1,241 @@
+*{
+    margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+font-family: 'Langar', cursive;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #f1faee;
+    
+    
+}
+
+
+.nav-links{
+    display: flex;
+   justify-content: space-around;
+   width: 40%;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: #e63946; 
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.logo img{
+    width: 50px;
+    margin-top: 5px;
+  
+}
+nav ul .search-icon{
+    height: 40px;
+    width: 240px;
+    display: flex;
+    background:#f2f2f2;
+    border-radius: 5px;
+}
+nav ul .search-icon input{
+    height: 100%;
+    width: 200px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    padding: 0 10px;
+    color: #e63946;
+    font-size: 16px;
+}
+nav ul .search-icon .icon{
+    height: 100%;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+   border: 1px solid #cccccc;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+
+}
+nav ul .search-icon .icon:hover{
+    background: #e4e8ec;
+    
+    
+    }
+    nav ul .search-icon .icon span{
+        color: #222222;
+        font-size: 18px;
+    
+    }
+   .nav-links a:hover{
+          color: #a8dadc;
+   }
+
+   nav ul li.btn{
+    font-size: 29px;
+    flex: 1;
+    padding: 0 40px;
+    display: none;
+}
+nav ul li.btn span{
+    height: 42px;
+    width: 42px;
+    text-align: center;
+    line-height: 42px;
+    border: 1px solid #e63946 ;
+    border-radius: 5px;
+    cursor: pointer;
+}
+nav ul li.btn:hover span::before{
+content: '\f00d';
+}
+#hero{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+#hero video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+     z-index: 5;
+    object-fit: initial;
+}    
+#hero .texture
+{
+width: 100%;
+height: 100%;
+position: absolute;
+top: 80px;
+left: 0px;
+z-index: 15;
+background: url('/img/texture.png');
+
+}
+#hero::after{
+    width:100% ;
+    height: 100%;
+    top: 80px;
+    left: 0px;
+    content: '';
+    position: absolute;
+    z-index: 10;
+    background: rgba(0,0,0, 0.7);
+    
+    }
+    #hero .caption{
+        position: absolute;
+        z-index: 20;
+        color: rgb(214, 210, 207);
+        text-align: center;
+        
+        }
+        #hero .caption h3{
+            font-weight: 400;
+            font-size: 1.5rem;
+            margin: -100px;
+            font-family: 'PT Sans', sans-serif;
+            }
+            
+    #hero .caption .btn{
+        border: 5px solid #ffffff;
+        background: none;
+        padding: 10px 20px;
+        font-size: 20px;
+        font-family: 'Langar', cursive;
+        cursor: pointer;
+        margin: 130px;
+        }
+        .btn1 a {
+        color:#ffffff;
+        text-decoration: none;
+        }
+        .btn2 a{
+        color: #ffffff;
+         text-decoration: none;
+        }
+        .btn1 a:hover{
+        color: #a8dadc;
+        }
+        .btn2 a:hover{
+        color: #a8dadc;
+        
+        }
+        @media screen and (min-width:1200px)
+        {
+        
+        #hero .caption h3{
+            font-size: 2.5rem;
+    }
+            #hero .caption .btn{
+                margin: 200px;
+            }
+        }
+        
+
+        /* NAVIGABLE BAR */
+        @media screen and (max-width:1052px){
+            nav{
+                padding: 10px 40px 10px 0px;
+        
+            }
+            nav ul li .logo img{
+                display: none;
+        
+            }
+            nav ul div .items{
+                flex: 4;
+        
+            }
+        
+        }
+        @media screen and (max-width:900px){
+        
+        nav ul li.btn{
+            display: block;
+           color: #e63946
+        
+        }
+        nav{
+            padding: 9px 40px 9px 0;
+            z-index: 1;
+        
+        }
+        .nav-links{
+            position: fixed;
+            top: -300px;
+            background: #e63946;
+            width: 100%;
+            right: 0;
+            display: inline-block;
+            z-index: -1;
+            transition: top 0.4s;
+        }
+        .nav-links.show{
+            top: 60px;
+        
+        }
+      .nav-links li{
+            text-align: center;
+            line-height: 30px;
+            margin: 30px 0;
+        }
+        .nav-links a{
+            font-size: 19px;
+        
+        }
+        
+        }
+
+        
